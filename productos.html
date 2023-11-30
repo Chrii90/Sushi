@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Hace tu reserva Online</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+crossorigin="anonymous">
+<link rel="stylesheet" href="css/styles.css"> <!-- Agregamos el archivo de estilos CSS separado -->
+</head>
+<body>
+  <header>
+    <h1>Sushi Paradise</h1>
+    <br>
+    <p style="color:#fcf8f8;font-family:Zambajoun;">SHUSHI BAR</p>
+   
+
+</header>
+
+<nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+        <li><a href="#about">Nosotros</a></li>
+        <li><a href="productos.html">Menú</a></li>
+        <li><a href="#contact">Contacto</a></li>
+    </ul>
+</nav>
+
+<main class="container">
+  <div id="app" class="container text-center">
+    <h1 style="color: white ;" class="my-4">Reserva tu Mesa</h1>
+    <a class="btn btn-primary" href="producto_nuevo.html">Nueva Reserva</a>
+
+    <div v-if="error" class="mt-4">
+      <p style="color: aliceblue">Lo sentimos, no pudimos cargar la base de datos, inténtelo en unos minutos</p>
+    </div>
+
+    <div v-else>
+      <section v-if="cargando" class="mt-4">
+        <div class="spinner-border"></div>
+        <p style="color: aliceblue">Cargando...</p>
+      </section>
+<div class="table-responsive">
+    <table class="table table-bordered table-auto">
+      <thead>
+        <tr>
+          <th scope="col">Id interno</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Mesa</th>
+          <th scope="col">Personas</th>
+          <th scope="col">Comprobante pago de Reserva</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+    <tbody>
+    <tr class="" v-for="producto in productos">
+    <td scope="row">{{producto.id}}</td>
+    <td>{{producto.nombre}}</td>
+    <td>{{producto.precio}}</td>
+    <td>{{producto.stock}}</td>
+    <td>
+    <img width="60" :src="producto.imagen" :alt="producto.nombre">
+    </td>
+    <td>
+        <div class="button-container">
+            <a class="btn btn-primary" :href="'producto_update.html?id=' + producto.id">Editar</a>
+            <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)">Eliminar</button>
+          </div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+</div>
+</main>
+
+
+
+<script>
+
+src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+crossorigin="anonymous"</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+crossorigin="anonymous"></script>
+<script src="./js/main.js"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
+<script src="./js/productos.js"></script>
+</body>
+</html>
