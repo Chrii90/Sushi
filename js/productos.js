@@ -5,7 +5,7 @@ return {
 productos:[],
 //url:'http://cm2705.pythonanywhere.com/productos',
 // si el backend esta corriendo local usar localhost 5000(si no lo subieron a pythonanywhere)
-url:'https://cm2705.pythonanywhere.com/productos', // si ya lo subieron a pythonanywhere
+url:'http://cm2705.pythonanywhere.com/productos', // si ya lo subieron a pythonanywhere
 error:false,
 cargando:true,
 /*atributos para el guardar los valores del formulario */

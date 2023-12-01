@@ -9,27 +9,31 @@
   src: url('../fonts/Zambajoun.woff') format('woff2');
 }
   
-  body {
-  font-family: 'Arial', sans-serif;
+  
+
+body {
   margin: 0;
   padding: 0;
-  background-color: rgb(15, 15, 15);
-  background-image: url(../img/1.png);
-  background-size: cover; /* Hace que la imagen de fondo cubra toda la pantalla */
-  background-position: center; /* Centra la imagen de fondo */
-  background-attachment: fixed; /* Fija la imagen de fondo para que no se desplace con el contenido */
-  height: 100vh; /* 100% del viewport height para ocupar toda la pantalla */
+  font-family: 'Arial', sans-serif; 
+  background-color: #000000;
 }
 
-  header {
-    background-color: rgb(9, 250, 21);
-    padding: 10px 0;
-    color: white;
-    text-align: center;
-  }
+header {
+  padding: 10px 0;
+  color: white;
+  text-align: center;
+  background-image: url('../img/2.jpg'); /* Ruta de la imagen de fondo para header y hero */
+  background-size: cover;
+  background-attachment: fixed;
+  transition: background-size 0.5s ease; /* Agregamos transición para suavizar el efecto de zoom */
+}
 
+@media screen and (max-width: 768px) {
+  header {
+      font-size: 1.5em;
+  }
+}
  
-  
   main {
     padding: 20px 0;
   }
@@ -48,14 +52,68 @@
   }
   
   .btn-reserva {
-    background-color: #28a745;
-    border-color: #28a745;
+    border: 2px solid #700505;
+    padding: 15px 45px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    text-transform: uppercase;
+    height: 40px;
+    line-height: 1.7;
+    font-size: 13px;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .btn-reserva:hover {
+    border: 2px solid #700505;
+    background-color: #700505;
+    padding: 15px 45px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    text-transform: uppercase;
+    height: 40px;
+    line-height: 1.7;
+    font-size: 13px;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    color: #fff;
+    text-decoration: none;
+
+  }
+
+  .btn-editar {
+    display: inline-block;
+  padding: 10px 20px;
+  background-color: #034d13; /* Puedes cambiar el color según tu preferencia */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+
+  }
+  .btn-editar:hover {
+    display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff; /* Puedes cambiar el color según tu preferencia */
+  color: #034d13;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+
   }
 
   .btn-primary {
     background-color: #28a745;
     border-color: #28a745;
-    color: #fff; /* Agrega color de texto para asegurar la visibilidad */
+    color: #8a0101; /* Agrega color de texto para asegurar la visibilidad */
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
@@ -85,7 +143,7 @@
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  background-color: #656566;
+  background-color: #65656600;
   max-width: 100%;
   border: 1px solid #fff; /* Borde inferior */
   box-shadow:    30px 30px 30px rgba(253, 2, 2, 0.2); /* Sombra */
@@ -202,66 +260,154 @@ img {
 /* hmlt*/
 
 
-
-header {
-  background-color: rgba(51, 51, 51, 0.733);
-  color: #fff;
-  text-align: center;
-  padding: 20px;
+.container {
+  margin: 0 auto;
+  background-image: url(../img/3.png);
+  background-size: cover;
+  background-attachment: fixed;
+  max-width: 100%;
 }
 
-nav ul {
-  list-style: none;
-  margin: 20px;
-  padding: 20px;
-  text-align: center;
-  font-size: 20px;
-  background-color: rgba(253, 2, 2, 0.185);
-  width: 100%; /* Hacer que la barra de navegación ocupe todo el ancho */
-  margin-right:15px;
+@media screen and (max-width: 768px) {
+  .container {
+      padding: 0 20px; /* Añade relleno a los lados en pantallas más pequeñas si es necesario */
+  }
 }
 
-nav ul li {
-  display: inline;
-  margin-right: 22px;
-}
 
-nav a {
-  text-decoration: none;
+nav {
+  background-color: transparent !important;
   color: #ad9300;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Inicialmente oculto en pantallas más grandes */
+  color:#ad9300;
+  
+  
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center; /* Alinea los elementos verticalmente al centro */
+  color:#ad9300;
+  font-size: 20px;
+  text-transform: uppercase;
+  
+}
+
+.nav-list li {
+  margin-left: 20px;
+  color:#ad9300;
+  
+  
+}
+
+.nav-list a {
+  text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease-in-out;
+  color:#ad9300;
+  
 }
 
-nav a:hover {
-  color: #fff;
+.nav-list a:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color:#fff;
 }
 
+/* Ajusta el tamaño de fondo al 110% cuando se pasa el mouse sobre el body */
+body:hover {
+  background-size: 110%;
+}
 
+/* Media query para hacer ajustes en tamaños de fuente u otros estilos en dispositivos más pequeños */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+      display: block; /* Mostrar en pantallas más pequeñas */
+  }
 
+  .nav-list {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0; /* Alinea el menú a la derecha */
+      width: 100%;
+      background-color: rgb(0, 0, 0);
+  }
 
+  .nav-list.show {
+      display: flex;
+  }
 
+  .nav-list li {
+      margin: 10px 0;
+  }
+}
 
 .hero {
-  position: relative;
-  height: 500px;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  background-color: transparent;
+  color: white;
+  text-align: center;
+  padding: 100px 0;
 }
-
 
 .hero-content {
-  max-width: 50%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.hero h2 {
+.hero h1 {
   font-size: 2.5em;
-  max-width: 600px;
-  margin: 50px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(94, 22, 22) ; /* Puedes cambiar el color según tu preferencia */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #e03e00; /* Cambia el color al pasar el mouse */
+}
+
+.new-section {
+  background-color: #f4f4f4; /* Color de fondo para la nueva sección */
+  padding: 80px 0;
+}
+
+.new-section-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.new-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.new-section p {
+  font-size: 1.2em;
 }
 
 .cta {
@@ -283,22 +429,20 @@ nav a:hover {
 }
 
 .rotating-image-container {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  overflow: hidden; /* Evitar que la imagen redonda se estire y se vuelva ovalada */
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  margin: 20px auto;
 }
 
 .rotating-image {
-  width: 95%;
+  width: 100%;
   height: 100%;
-  object-fit: contain; /* Asegurar que la imagen redonda se ajuste al contenedor sin distorsión */
-  background: url('../img/2.png') center/cover no-repeat; /* Reemplaza 'sushi-icon.png' con tu imagen redonda */
-  animation: rotate 30s linear infinite; /* Cambia la duración a 6 segundos */
+  background: url('../img/5.png') center/cover;
+  animation: rotateImage 25s linear infinite;
 }
 
-@keyframes rotate {
+@keyframes rotateImage {
   0% {
       transform: rotate(0deg);
   }
@@ -307,24 +451,33 @@ nav a:hover {
   }
 }
 
+
 /* Estilos responsivos */
 @media (max-width: 768px) {
   .hero {
       flex-direction: column-reverse;
       height: auto;
+      width: auto;
   }
 
   .hero-content,
   .rotating-image-container {
-      width: 100%;
-      max-width: none;
+      width: auto;
+      text-align: center; /* Centrar el contenido horizontalmente */
   }
 
   .rotating-image-container {
       margin-top: 20px;
+      width: 100%;
   }
-}
 
+  .rotating-image {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto; /* Centrar la imagen horizontalmente */
+} 
+
+}
 
 
 
@@ -361,129 +514,54 @@ footer {
     bottom: 0;
     width: 100%;
 }
-/* Estilos responsivos */
-@media (max-width: 768px) {
-  .hero {
-      flex-direction: column-reverse;
-      height: auto;
-  }
 
-  .hero-content,
-  .rotating-image-container {
-      width: 100%;
-      max-width: none;
-  }
-
-  .rotating-image-container {
-      margin-top: 20px;
-  }
-}
 .container h2{
-  color:#fff;
+  color:#28a745;
   font-weight: bold;
 }
 
+
+
+
 #about {
-    text-align: center;
-    padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
 }
 
-
-.about-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin:  15px;
-    background-color: #0000008a;
+.column {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
 }
 
-.video-container {
-    flex: 1;
-    position: relative;
-    overflow: hidden;
+.center-column {
+  flex: 2;
+  text-align: center; /* Centrar el texto en la columna central */
 }
 
-.play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80px;
-    height: 80px;
-    background-color: #333;
-    border-radius: 50%;
-    cursor: pointer;
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
-
-.play-button::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-40%, -50%);
-    border-style: solid;
-    border-width: 20px 0 20px 30px;
-    border-color: transparent transparent transparent #fff;
-}
-
-video {
-    width: 100%;
-}
-
 
 @media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-    }
+  .column {
+    display: none; /* Ocultar columnas en dispositivos móviles */
+  }
 
-    .video-container,
-    .text-container {
-        width: 100%;
-    }
-}
+  .center-column {
+    flex: 1; /* Ajustar el ancho de la columna central en dispositivos móviles */
+  }
 
-.text-container {
-  flex: 1;
-  padding: 20px;
-  text-align: center;
-}
-
-.icon-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  
-}
-
-.icon-item {
-  position: relative;
-  text-align: center;
-  overflow: hidden; /* Para ocultar cualquier parte del texto que se salga del contenedor */
-  transition: transform 0.3s ease-in-out; /* Agrega una transición suave al efecto de zoom */
-  margin: 10px;
-}
-
-.icon-item:hover {
-  transform: scale(1.2); /* Aplica un zoom del 120% al pasar el mouse por encima */
-}
-
-.icon-item i {
-  font-size: 2em; /* Puedes ajustar el tamaño según tus preferencias */
-  color: #fff; /* Puedes ajustar el color según tus preferencias */
-  position: relative;
-  z-index: 2; /* Coloca el ícono en una capa más alta para que esté sobre el texto */
-}
-
-.icon-item p {
-  margin-top: 10px;
-  position: relative;
-  z-index: 1; /* Coloca el texto en una capa inferior */
-  color: #fff;
-  font-size:12 px;
-}
-
-.icon-item:hover p {
-  transform: scale(1); /* Ajusta el tamaño del texto de nuevo a la escala original */
+  /* Ajustar el tamaño de fuente y otros estilos para dispositivos móviles */
+  p {
+    font-size: 16px; /* Tamaño de fuente más pequeño para dispositivos móviles */
+    margin-bottom: 10px; /* Menos espacio entre párrafos */
+  }
 }
 .responsive-iframe-container {
   position: relative;
@@ -545,5 +623,140 @@ button {
 @media (min-width: 768px) {
   #contact {
       grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+#cta-section {
+  position: relative;
+  background-image: url('../img/hero.png'); /* Reemplaza 'hero.png' con la ruta de tu imagen de fondo */
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+
+#cta-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.658); /* Ajusta el valor alfa (último número) para cambiar la opacidad */
+  z-index: 0; /* Cambiado a 0 para estar en el mismo nivel que el fondo */
+}
+
+/* Ajusta el z-index del contenido para que esté por encima del pseudo-elemento */
+#cta-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Color negro con 50% de opacidad */
+  z-index: -1; /* Para colocar el overlay detrás del contenido */
+}
+
+#cta-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#cta-section p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+#cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  text-decoration: none;
+  background-color: #ff5733;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#cta-button:hover {
+  background-color: #e64a2e;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.imagen {
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px; /* Máximo ancho para evitar que las imágenes sean demasiado grandes en pantallas grandes */
+}
+
+.imagen img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.imagen:hover img {
+  transform: scale(1.1);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-contenido {
+  margin: 15% auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.cerrar {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.imagen {
+  cursor: pointer;
+}
+
+/* Media query para dispositivos con ancho máximo de 600px */
+@media only screen and (max-width: 600px) {
+  .imagen {
+      max-width: 100%; /* Cambiado a 100% para pantallas pequeñas */
   }
 }

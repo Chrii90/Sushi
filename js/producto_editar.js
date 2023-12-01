@@ -10,7 +10,7 @@ nombre:"",
 imagen:"",
 stock:0,
 precio:0,
-url:'https://cm2705.pythonanywhere.com/productos/'+id,
+url:'http://cm2705.pythonanywhere.com/productos/'+id,
 }
 },
 methods: {

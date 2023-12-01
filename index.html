@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <title>Sushi Paradise</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -11,75 +12,131 @@ crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
-    <title>Sushi Paradise</title>
-</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cookie&family=Dancing+Script:wght@700&family=Nunito+Sans:opsz,wght@6..12,800&family=Roboto:wght@700&display=swap" rel="stylesheet"></head>
 <body>
-    <header>
-        <h1>Sushi Paradise</h1>
-        <br>
-        <p style="color:#fcf8f8;font-family:Zambajoun;">SHUSHI BAR</p>
-       
-
-    </header>
-
     <nav>
-        <ul>
-            
-            <li><a href="index.html">Home</a></li>
-        <li><a href="#about">Nosotros</a></li>
-        <li><a href="productos.html">Reservas</a></li>
-        <li><a href="#contact">Contacto</a></li>
+        <div class="menu-toggle">&#9776;</div>
+        <ul class="nav-list">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">Reservas</a></li>
+            <li><a href="#">Contacto</a></li>
         </ul>
     </nav>
-
-    <section class="hero">
-        <div>
-            <h2>Descubre el autentico sabor del sushi</h2>
-            <a href="productos.html" class="cta">¡Haz tu Reserva!</a>
-        </div>
-        <div class="rotating-image-container">
-            <div class="rotating-image"></div>
-        </div>
-    </section>
+    <header>
+        <h1 style= "color: #fafaf8; font-family: 'Dancing Script', cursive; font-size: 96px;">Sushi Paradise</h1>
+        <h2 style="font-size:32px; color: #ad9300; font-family: 'Dancing Script', cursive; ">Descubre el verdadero abor del sushi</h2>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 style="font-family: 'Roboto', sans-serif; color: rgb(167, 2, 2)">Bienvenido a nuestro paraíso del sushi!</h1>
+                
+                <div class="rotating-image-container">
+                    <div class="rotating-image"></div>
+                </div>
+                <br>
+                <a href="#" class="btn-reserva">Ver Menú</a>
+            </div>
+        </section>
+    </header>   
 
     <section id="about">
-        
-        <br><br>
-    
-        <div class="about-container">
-            <div class="video-container">
-                <div class="play-button"></div>
-                <video controls>
-                    <source src="tu-video.mp4" type="video/mp4">
-                    Tu navegador no soporta el tag de video.
-                </video>
-            </div>
-    
-            
-            <div class="text-container">
-                <h1 style="color:#ad9300;">About Us</h1>
-                <br>
-                <div class="icon-grid">
-                    <div class="icon-item">
-                        <i class="fas fa-beer"></i>
-                        <p>Disfruta de nuestros exquisitos platillos de sushi, preparados con los ingredientes más frescos y auténticos.</p>
-                    </div>
-                    <div class="icon-item">
-                        <i class="fas fa-coffee"></i>
-                        <p>Relájate con nuestro café de alta calidad, elaborado por baristas expertos para brindarte la mejor experiencia.</p>
-                    </div>
-                    <div class="icon-item">
-                        <i class="fas fa-wine-glass"></i>
-                        <p>Descubre nuestra selección de vinos finos, cuidadosamente elegidos para complementar tu experiencia culinaria.</p>
-                    </div>
-                    <div class="icon-item">
-                        <i class="fas fa-utensils"></i>
-                        <p>Experimenta la excelencia en cada bocado con nuestros utensilios de calidad y servicio de primera clase.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="column">
+            <img src="./img/5.jpg" alt="Imagen 1">
+        </div>
+
+        <div class="center-column">
+            <h2 style="font-size: 60px; color: #ad9300;">ART OF FOOD</h2><br><br><br>
+            <p style="color: white; font-weight: bold;">Nuestro objetivo es promover la industria alimentaria a través de las sucursales que establecemos y a través de los nuevos platos. e integrarnos entre diferentes culturas.</p>
+        </div>
+
+        <div class="column">
+            <img src="./img/6.jpg" alt="Imagen 2">
         </div>
     </section>
+
+
+    <section id="cta-section">
+        <h1 style= "font-family: 'Dancing Script', cursive; color: rgb(163, 0, 0); font-size: 96px;">¡Hace tu Reserva!</h1>
+        <p>¡Reserva ahora y disfruta de una experiencia única! 🥢</p>
+        <a href="#" class="btn-reserva">Reservar</a>
+    </section>
+
+
+    <!-- Galeria -->
+
+    <div class="galeria">
+        <div class="imagen" onclick="abrirImagen('img/11.png', 'Descripción de la imagen 1')">
+            <img src="img/11.png" alt="Descripción de la imagen 1">
+        </div>
+        <div class="imagen" onclick="abrirImagen('img/10.png', 'Descripción de la imagen 2')">
+            <img src="img/10.png" alt="Descripción de la imagen 2">
+        </div>
+        <div class="imagen" onclick="abrirImagen('img/12.png', 'Descripción de la imagen 2')">
+            <img src="img/12.png" alt="Descripción de la imagen 2">
+        </div>
+        <div class="imagen" onclick="abrirImagen('img/13.png', 'Descripción de la imagen 2')">
+            <img src="img/13.png" alt="Descripción de la imagen 2">
+        </div>
+        <div class="imagen" onclick="abrirImagen('img/14.png', 'Descripción de la imagen 2')">
+            <img src="img/14.png" alt="Descripción de la imagen 2">
+        </div>
+        <div class="imagen" onclick="abrirImagen('img/15.png', 'Descripción de la imagen 2')">
+            <img src="img/15.png" alt="Descripción de la imagen 2">
+        </div>
+        <div class="imagen" onclick="abrirImagen('img/16.png', 'Descripción de la imagen 2')">
+            <img src="img/16.png" alt="Descripción de la imagen 2">
+        </div>
+        <div class="imagen" onclick="abrirImagen('img/17.png', 'Descripción de la imagen 2')">
+            <img src="img/17.png" alt="Descripción de la imagen 2">
+        </div>
+        <div class="imagen" onclick="abrirImagen('img/18.png', 'Descripción de la imagen 2')">
+            <img src="img/18.png" alt="Descripción de la imagen 2">
+        </div>
+        <div class="imagen" onclick="abrirImagen('img/19.png', 'Descripción de la imagen 2')">
+            <img src="img/19.png" alt="Descripción de la imagen 2">
+        </div>
+        <div class="imagen" onclick="abrirImagen('img/10.png', 'Descripción de la imagen 2')">
+            <img src="img/10.png" alt="Descripción de la imagen 2">
+        </div>
+        <div class="imagen" onclick="abrirImagen('img/15.png', 'Descripción de la imagen 2')">
+            <img src="img/15.png" alt="Descripción de la imagen 2">
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <img class="modal-contenido" id="imagenModal" alt="">
+        <div id="descripcionModal"></div>
+    </div>
+
+    <script>
+        function abrirImagen(src, descripcion) {
+            var modal = document.getElementById('modal');
+            var imagenModal = document.getElementById('imagenModal');
+            var descripcionModal = document.getElementById('descripcionModal');
+
+            imagenModal.src = src;
+            descripcionModal.innerHTML = descripcion;
+            modal.style.display = 'block';
+        }
+
+        function cerrarModal() {
+            var modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        }
+    </script>
+
+
+<!-- /Galeria -->
+
 
     <main class="container">
         <div id="app" class="container text-center">
@@ -119,51 +176,6 @@ crossorigin="anonymous">
       </div>
       </div>
       </main>
-      
-      <section id="contact">
-        <div id="contact-info">
-            <h2 style="color:#d40000;font-size:250%;font-family:Anything;">Información de contacto</h2>
-            <br>
-            <br>
-            <p style="color:white;font-size:120%;">Dirección: 123 Calle Ficticia,
-                
-Manhattan
-Nueva York,
-</p>
-            <p style="color:white;font-size:120%;">Email: info@sushiparadaise.com</p>
-            <p style="color:white;font-size:120%;">Teléfono: 123-456-789</p>
-
-            <iframe
-        width="600"
-        height="450"
-        style="border:0"
-        loading="lazy"
-        allowfullscreen
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22492.4281300574!2d-74.00600538452607!3d40.71278718127795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2594d33f09d2d%3A0x3724d2dc8df05e1b!2sManhattan%2C%20Nueva%20York%2C%20NY%2C%20EE.%20UU.!5e0!3m2!1ses-419!2sco!4v1634161863425!5m2!1ses-419!2sco">
-    </iframe>
-        </div>
-
-        <div id="contact-form">
-            <h2 style="color:#d40000;font-size:250%;font-family:Anything;">Formulario de contacto</h2>
-            <br>
-            <br>
-            <form>
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </section>
-    
-    
-    
 
     <footer>
         <p>&copy; 2023 Sushi Paradise. Todos los derechos reservados.</p>
@@ -181,6 +193,9 @@ Nueva York,
       <script src="./js/main.js"></script>
       <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
       <script src="./js/productos.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+      <script src="./js/script.js"></script>
+
 </body>
 </html>
 
