@@ -569,10 +569,6 @@ textarea {
   color: #700505; /* Cambiar a tu color deseado cuando se pasa el mouse */
 }
 
-.footer-column ul {
-  list-style: none;
-}
-
 /* Media query para dispositivos con un ancho máximo de 600px (móviles) */
 @media screen and (max-width: 600px) {
   .footer-container {
@@ -607,7 +603,6 @@ button:hover {
 
 #about {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
@@ -620,8 +615,17 @@ button:hover {
 }
 
 .center-column {
-  flex: 2;
-  text-align: center; /* Centrar el texto en la columna central */
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  background-color: #33333300;
+  color: #fff;
+}
+
+video {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px;
 }
 
 img {
@@ -632,17 +636,17 @@ img {
 
 @media (max-width: 768px) {
   .column {
-    display: none; /* Ocultar columnas en dispositivos móviles */
+      display: none; /* Ocultar columnas en dispositivos móviles */
   }
 
   .center-column {
-    flex: 1; /* Ajustar el ancho de la columna central en dispositivos móviles */
+      flex: 1; /* Ajustar el ancho de la columna central en dispositivos móviles */
   }
 
   /* Ajustar el tamaño de fuente y otros estilos para dispositivos móviles */
   p {
-    font-size: 16px; /* Tamaño de fuente más pequeño para dispositivos móviles */
-    margin-bottom: 10px; /* Menos espacio entre párrafos */
+      font-size: 16px; /* Tamaño de fuente más pequeño para dispositivos móviles */
+      margin-bottom: 10px; /* Menos espacio entre párrafos */
   }
 }
 .responsive-iframe-container {
