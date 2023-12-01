@@ -10,27 +10,21 @@ crossorigin="anonymous">
 <link rel="stylesheet" href="css/styles.css"> <!-- Agregamos el archivo de estilos CSS separado -->
 </head>
 <body>
-  <header>
-    <h1>Sushi Paradise</h1>
-    <br>
-    <p style="color:#fcf8f8;font-family:Zambajoun;">SHUSHI BAR</p>
-   
-
-</header>
-
-<nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-        <li><a href="#about">Nosotros</a></li>
-        <li><a href="productos.html">Menú</a></li>
-        <li><a href="#contact">Contacto</a></li>
+  <nav>
+    <div class="menu-toggle">&#9776;</div>
+    <ul class="nav-list">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Menú</a></li>
+        <li><a href="#">Reservas</a></li>
+        <li><a href="#">Contacto</a></li>
     </ul>
 </nav>
+  
 
 <main class="container">
   <div id="app" class="container text-center">
     <h1 style="color: white ;" class="my-4">Reserva tu Mesa</h1>
-    <a class="btn btn-primary" href="producto_nuevo.html">Nueva Reserva</a>
+    <a class="btn-reserva" href="producto_nuevo.html">Nueva Reserva</a>
 
     <div v-if="error" class="mt-4">
       <p style="color: aliceblue">Lo sentimos, no pudimos cargar la base de datos, inténtelo en unos minutos</p>
@@ -64,7 +58,7 @@ crossorigin="anonymous">
     </td>
     <td>
         <div class="button-container">
-            <a class="btn btn-primary" :href="'producto_update.html?id=' + producto.id">Editar</a>
+            <a class="btn-editar" :href="'producto_update.html?id=' + producto.id">Editar</a>
             <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)">Eliminar</button>
           </div>
 </td>
