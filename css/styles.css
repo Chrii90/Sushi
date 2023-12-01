@@ -569,6 +569,10 @@ textarea {
   color: #700505; /* Cambiar a tu color deseado cuando se pasa el mouse */
 }
 
+.footer-column ul {
+  list-style: none;
+}
+
 /* Media query para dispositivos con un ancho máximo de 600px (móviles) */
 @media screen and (max-width: 600px) {
   .footer-container {
