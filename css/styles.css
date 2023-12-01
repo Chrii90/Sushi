@@ -507,13 +507,90 @@ section {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    
-    bottom: 0;
+  background: rgb(61, 61, 61);
+  background: linear-gradient(0deg, rgba(61, 61, 61, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.subscription {
+  background-color: #44444400;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+textarea {
+  width: calc(100% - 16px);
+  padding: 10px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  background-color: #00000000;
+  border: none;
+  color: #ad9300;
+  resize: none;
+}
+
+.social-icons {
+  text-align: center; /* Centrar los íconos */
+}
+
+.social-icons a {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 24px;
+  text-align: center;
+}
+.social-icons a:hover {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 24px;
+  text-align: center;
+  transition: color 0.3s; /* Agregado para una transición suave del color */
+}
+
+.social-icons a:hover {
+  color: #700505; /* Cambiar a tu color deseado cuando se pasa el mouse */
+}
+
+/* Media query para dispositivos con un ancho máximo de 600px (móviles) */
+@media screen and (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
     width: 100%;
+  }
+}
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
 }
 
 .container h2{
@@ -600,7 +677,7 @@ img {
 }
 
 
-input, textarea {
+input {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -761,3 +838,25 @@ body {
       max-width: 100%; /* Cambiado a 100% para pantallas pequeñas */
   }
 }
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-info {
+  flex: 1;
+  padding: 20px;
+  background-color: #f4f4f400;
+  border-radius: 10px;
+}
+
+.contact-form {
+  flex: 1;
+  padding: 20px;
+  background-color: #e6e6e600;
+  border-radius: 10px;
+}
+
